@@ -9,7 +9,7 @@ npx web-push generate-vapid-keys
 
 2. Guardar llaves en el `.env`
 
-3. Crear servicio en el **Frontend** en `/public/sw.js`
+3. Crear servicio en el **Frontend** en `/public/sw.js`(vite React)
 ~~~js
 self.addEventListener ('push', async (event) => {
   const data = await event.data.json()
@@ -20,7 +20,7 @@ self.addEventListener ('push', async (event) => {
 })
 ~~~
 
-4. Montar el servicio al iniciar la app
+4. Montar el servicio al iniciar la app (React)
 ~~~js
 const subscribe = async () => {
     try {
